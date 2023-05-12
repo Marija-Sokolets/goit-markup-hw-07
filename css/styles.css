@@ -401,15 +401,15 @@ img {
 }
 
 .text {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (max-width: 1157px) {
     .text {
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 
@@ -440,17 +440,16 @@ img {
 
 /* Section 3 */
 
-/* .subtitle {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--color-navy-blue);
-} */
-
 .team-section {
     background-color: var(--color-cloud);
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .team-container {
+        max-width: 294px;
+  }
+}
+
 
 .team-title {
     margin-top: 0;
@@ -458,7 +457,12 @@ img {
 }
 
 .team-list {
+   --items: 1; 
+}
+
+.card-set {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -469,8 +473,25 @@ img {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.card-set-item {
+    width: calc((100% - 24px) * (var(--items) - 1 )) / var(--items);
+}
+
 .employee {
-    padding: 32px 0;
+    padding: 32px 16px;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-navy-blue);
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .position {
@@ -478,10 +499,6 @@ img {
     margin-bottom: 8px;
 }
 
-.name {
-    text-align: center;
-    margin-bottom: 8px;
-}
 
 /* Socials icons */
 
