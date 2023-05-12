@@ -357,6 +357,7 @@ img {
         display: none;
     }
 }
+
 @media screen and (min-width: 1158px) {
     .principle-icon {
         display: flex;
@@ -416,6 +417,12 @@ img {
 
 .doing-section {
     padding-top: 0;
+}
+
+@media screen and (max-width: 1157px) {
+    .doing-section {
+        display: none;
+    }
 }
 
 .doing-title {
