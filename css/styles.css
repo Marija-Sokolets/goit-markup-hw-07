@@ -444,13 +444,6 @@ img {
     background-color: var(--color-cloud);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-    .team-container {
-        max-width: 294px;
-  }
-}
-
-
 .team-title {
     margin-top: 0;
     margin-bottom: 72px;
@@ -533,13 +526,10 @@ img {
 /* Customers */
 
 .customers-title {
-    line-height: 1.1;
     margin-bottom: 72px;}
 
 .customers-list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    --items: 2;
 }
 
 .customers-link {
