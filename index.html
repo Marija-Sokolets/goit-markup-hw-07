@@ -50,6 +50,15 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -63,12 +72,12 @@
         </div>
       </section>
       <!-- Section 1 -->
-      <section class="section-principles">
+      <section class="section section-principles">
         <div class="container">
           <h2 class="title-hidden-principles visually-hidden">
             Basic principles
           </h2>
-          <ul class="list principle-list">
+          <ul class="list principles-list">
             <li class="principle-item">
               <div class="principle-icon">
                 <svg width="64" height="64">
@@ -121,7 +130,7 @@
         </div>
       </section>
       <!-- Section 2 -->
-      <section class="doing-section">
+      <!-- <section class="section doing-section">
         <div class="container">
           <h2 class="title doing-title">What are we doing</h2>
           <ul class="list doing-list">
@@ -151,9 +160,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Section 3 -->
-      <section class="team-section">
+      <!-- <section class="section team-section">
         <div class="container">
           <h2 class="title team-title">Our Team</h2>
           <ul class="list team-list">
@@ -423,9 +432,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Section 4 -->
-      <section class="customers-section">
+      <!-- <section class="section customers-section">
         <div class="container">
           <h2 class="title customers-title">Customers</h2>
           <ul class="list customers-list">
@@ -509,10 +518,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <div class="logo-container">
           <a class="logo-footer link" href="./index.html"
@@ -600,9 +609,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-button" type="button" data-modal-close>
           <svg class="modal-icon" width="8" height="8">
@@ -673,8 +682,101 @@
           <button class="button-send button" type="submit">Send</button>
         </form>
       </div>
+    </div> -->
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="js-close-menu menu-close-button">
+        <svg class="modal-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="list mobile-menu">
+        <li>
+          <a class="link mobile-menu-title" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="link mobile-menu-title" href="./portfolio.html"
+            >Portfolio</a
+          >
+        </li>
+        <li><a class="link mobile-menu-title" href="">Contacts</a></li>
+      </ul>
+      <ul class="list mobile-contacts">
+        <li>
+          <a class="link mobile-contacts-tel" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a class="link mobile-contacts-mail" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-socials list">
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
     <script src="./js/animation.js"></script>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
