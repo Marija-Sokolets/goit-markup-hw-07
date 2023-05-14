@@ -21,6 +21,8 @@ ul {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 :root {
@@ -237,15 +239,22 @@ img {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/people-office.jpg);
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_mob@1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (min-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_tab@1x.jpg);
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .hero {
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_desk@1x.jpg);
     }
 }
 
@@ -682,12 +691,38 @@ img {
 .footer {
     color: var(--color-cloud);
     background-color: var(--color-navy-blue);
-    padding: 100px 0;
+    padding: 96px 0;
 }
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding-left: 108px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-container {
+        padding-left: 15px;
+    }
+}
+
+.logo-container {
+    margin-bottom: 72px;
+}
+
+@media screen and (min-width: 1158px) {
+    .logo-container {
+        margin-bottom: 0;
+    }
 }
 
 .logo-footer {
@@ -702,15 +737,56 @@ img {
     margin-bottom: 16px;
 }
 
-.logo-link-footer {color: var(--color-cloud);}
+@media screen and (max-width: 767px) {
+    .logo-footer {
+        display: block;
+        text-align: center;
+    }
+}
 
-.logo-container {
-    margin-right: 120px;
+.logo-link-footer {
+    color: var(--color-cloud);
 }
 
 .logo-footer-text {
     max-width: 268px;
-    margin: 0;
+    margin-left: 65px;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-footer-text {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo-footer-text {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .logo-footer-text {
+        margin-right: 116px;
+    }
+}
+
+.social-container {
+    margin-bottom: 72px;
+}
+
+@media screen and (max-width: 767px) {
+    .social-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .social-container {
+        margin-bottom: 0;
+    }
 }
 
 .social-subtitle {
@@ -747,6 +823,26 @@ img {
     margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+    .subscribe-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-container {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .subscribe-container {
+        margin-left: auto;
+    }
+}
+
 .subtitle-subscribe-form {
     display: flex;
     font-size: 16px;
@@ -757,11 +853,19 @@ img {
 
 .subscribe-form {
     display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-form {
+        flex-direction: row;
+    }
 }
 
 .subscribe-box {
     padding: 8px 16px;
-    min-width: 264px;
+    margin-bottom: 16px;
+    min-width: 398px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--color-white);
@@ -772,6 +876,14 @@ img {
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-box {
+        min-width: 264px;
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
 }
 
 .subscribe-box:focus {
@@ -788,7 +900,7 @@ img {
 .button-subscribe {
     display: flex;
     padding: 8px 24px;
-    margin-left: 24px;
+    margin: auto;
     justify-content: center;
     align-items: center;
     gap: 16px;
