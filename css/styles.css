@@ -245,16 +245,40 @@ img {
     background-size: cover;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 428px) {
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_mob@2x.jpg);
+            }
+        }
+}
+
+@media screen and (min-width: 429px) and (max-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_tab@1x.jpg);
     }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_tab@2x.jpg);
+        }
+    }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 769px) and (max-width: 1440px) {
     .hero {
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_desk@1x.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero_desk@2x.jpg);
+        }
     }
 }
 
@@ -444,7 +468,7 @@ img {
 }
 
 .doing-link {
-   width: calc((100% - 48px) / 3) 
+   width: calc((100% - 48px) / 3);
 }
 
 /* Section 3 */
@@ -458,14 +482,17 @@ img {
     margin-bottom: 72px;
 }
 
-.team-list {
-   --items: 1; 
-}
 
 .card-set {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+}
+
+@media screen and (max-width: 1157px) {
+    .card-set {
+        justify-content: center;
+    }
 }
 
 .team-link {
@@ -475,9 +502,6 @@ img {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.card-set-item {
-    width: calc((100% - 24px) * (var(--items) - 1 )) / var(--items);
-}
 
 .employee {
     padding: 32px 16px;
@@ -926,9 +950,10 @@ img {
     transition: opacity 200ms ease, visibility 200ms ease;
 }
 
-@media screen and (orientation: lanscape) {
+@media screen and (orientation: landscape) {
     .backdrop {
         overflow: auto;
+        ;
     }
 }
 
