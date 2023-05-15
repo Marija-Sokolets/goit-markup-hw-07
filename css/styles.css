@@ -55,8 +55,6 @@ img {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid red;
-    outline-offset: -2px;
 }
 
     /* Tablet styles & > */
@@ -328,11 +326,11 @@ img {
     }
 }
 
-@media screen and (min-width: 1158px) {
+/* @media screen and (min-width: 1158px) {
     .subject {
         margin: 0 auto 48px;
     }
-}
+} */
 
 .button {
     font-weight: 500;
@@ -764,13 +762,13 @@ img {
 .footer > .footer-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 72px;
+    row-gap: 72px;
+    justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
     .footer > .footer-container {
         column-gap: 16px;
-        row-gap: 72px;
         align-items: baseline;
     }
 }
@@ -782,14 +780,15 @@ img {
 }
 
 @media screen and (min-width: 1158px) {
-    .footer-container {
-        padding-left: 15px;
+    .footer > .footer-container {
+        display: flex;
+        gap: unset;
+        flex-wrap: nowrap;
     }
 }
 
 .logo-container {
     width: 268px;
-    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -831,6 +830,7 @@ img {
 
 .logo-footer-text {
     width: 264px;
+    text-align: left;
 }
 
 .social-container {
@@ -922,7 +922,7 @@ img {
 .subscribe-box {
     padding: 8px 16px;
     margin-bottom: 16px;
-    min-width: 320px;
+    min-width: 290px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--color-white);
@@ -990,9 +990,9 @@ img {
     }
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
+.is-hidden {
     visibility: hidden;
+    opacity: 0;
     pointer-events: none;
     transition-delay: 400ms;
 }
@@ -1016,6 +1016,18 @@ img {
     .modal {
         width: 408px;
         padding: 24px;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .modal {
+        width: 392px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .modal {
+        width: 320px;
     }
 }
 
@@ -1301,7 +1313,7 @@ img {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -1317,7 +1329,6 @@ img {
 }
 
 .mobile-contacts-mail {
-    padding-top: 40px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -1336,6 +1347,7 @@ img {
 }
 
 .mobile-socials {
+    max-width: 328px;
     display: flex;
-    gap: 56px;
+    justify-content: space-between;
 }
